@@ -1,0 +1,11 @@
+// Project level Gradle to reduce complexity and repeated code in multi module project
+ext{
+  ver_dagger = "2.38.1"
+
+
+    dagger = [
+            Main : "com.google.dagger:dagger-android:$ver_dagger",
+            support : "com.google.dagger:dagger-android-support:$ver_dagger",
+            kapt  : "com.google.dagger:dagger-compiler:$ver_dagger"
+    ]
+}
