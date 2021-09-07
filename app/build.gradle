@@ -47,4 +47,8 @@ dependencies {
     kapt dagger.support
     kapt dagger.kapt
 
+    // retrofit
+    implementation retrofit.Main
+    implementation retrofit.gsonConvertor
+
 }
