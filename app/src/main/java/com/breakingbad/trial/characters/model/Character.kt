@@ -1,4 +1,4 @@
-package com.breakingbad.trial.characters
+package com.breakingbad.trial.characters.model
 
 data class Character(
     val appearance: List<Int>,
