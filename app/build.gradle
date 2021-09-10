@@ -44,11 +44,17 @@ dependencies {
 
     // dagger
     implementation dagger.Main
-    kapt dagger.support
-    kapt dagger.kapt
+    implementation dagger.support
+    kapt dagger.compiler
+    kapt dagger.preProcessor
+
 
     // retrofit
     implementation retrofit.Main
     implementation retrofit.gsonConvertor
+
+    // coroutines
+    implementation coroutine.Main
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.4.1'
 
 }

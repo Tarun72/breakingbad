@@ -1,17 +1,29 @@
 package com.breakingbad.trial.base.di
 
+import com.breakingbad.trial.util.Constants
 import com.google.gson.Gson
-import com.mine.mvvmmitch.utill.Constants
 import com.mine.mvvmmitch.utill.LiveDataCallAdapterFactory
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
+import com.google.gson.GsonBuilder
+
+
+
 
 @Module
 class AppModule {
 
+
+    @Singleton
+    @Provides
+    fun provideGsonBuilder(): Gson {
+      return GsonBuilder()
+            .setLenient()
+            .create()
+    }
       /**
      * For these cases where @Inject is insufficient or awkward,
      * use an @Provides-annotated method to satisfy a dependency.
@@ -20,11 +32,11 @@ class AppModule {
      * */
     @Singleton
     @Provides
-    fun provideRetrofitBuilder(gsonBuilder: Gson): Retrofit.Builder {
+    fun provideRetrofitBuilder(gson: Gson): Retrofit.Builder {
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
             .addCallAdapterFactory(LiveDataCallAdapterFactory())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
     }
 }
 /**

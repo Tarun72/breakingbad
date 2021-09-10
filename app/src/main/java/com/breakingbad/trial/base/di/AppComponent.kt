@@ -10,20 +10,24 @@ import dagger.android.AndroidInjector
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [
-    /**
-     * Contains bindings to ensure the usability of {@code dagger.android} framework classes. This
-     * module should be installed in the component that is used to inject the {@link
-     * android.app.Application} class.
-     */
-    AndroidInjectionModule::class,
-    ViewModelFactoryModule::class
-])
-interface AppComponent : AndroidInjector<BreakingBadApplication>{
+@Component(
+    modules = [
+        /**
+         * Contains bindings to ensure the usability of {@code dagger.android} framework classes. This
+         * module should be installed in the component that is used to inject the {@link
+         * android.app.Application} class.
+         */
+        AndroidInjectionModule::class,
+        ViewModelFactoryModule::class,
+        AppModule::class,
+        ActivityBuilderModule::class
+    ]
+)
+interface AppComponent : AndroidInjector<BreakingBadApplication> {
     override fun inject(application: BreakingBadApplication)
 
     @Component.Builder
-    interface Builder{
+    interface Builder {
 
         @BindsInstance
         fun application(application: Application): Builder
