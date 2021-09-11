@@ -2,10 +2,9 @@ package com.breakingbad.trial.characters.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.breakingbad.trial.characters.ResponseCharacter
 import com.breakingbad.trial.characters.model.Character
 import com.breakingbad.trial.characters.repository.CharacterRepository
-import com.mine.mvvmmitch.utill.GenericApiResponse
+import com.breakingbad.trial.util.GenericApiResponse
 import javax.inject.Inject
 
 class CharacterViewModel @Inject

@@ -1,4 +1,4 @@
-package com.mine.mvvmmitch.utill
+package com.breakingbad.trial.util
 
 import android.util.Log
 import retrofit2.Response

@@ -1,4 +1,4 @@
-package com.mine.mvvmmitch.utill
+package com.breakingbad.trial.util
 
 import androidx.lifecycle.LiveData
 import retrofit2.CallAdapter

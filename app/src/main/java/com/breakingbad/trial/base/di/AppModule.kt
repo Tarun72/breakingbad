@@ -1,8 +1,8 @@
 package com.breakingbad.trial.base.di
 
 import com.breakingbad.trial.util.Constants
+import com.breakingbad.trial.util.LiveDataCallAdapterFactory
 import com.google.gson.Gson
-import com.mine.mvvmmitch.utill.LiveDataCallAdapterFactory
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

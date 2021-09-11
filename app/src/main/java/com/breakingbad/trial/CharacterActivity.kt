@@ -8,10 +8,9 @@ import com.breakingbad.trial.base.di.viewmodel.ViewModelProviderFactory
 import com.breakingbad.trial.characters.viewmodel.CharacterViewModel
 import javax.inject.Inject
 import androidx.lifecycle.ViewModelProvider
-import com.breakingbad.trial.base.TAG
-import com.mine.mvvmmitch.utill.ApiEmptyResponse
-import com.mine.mvvmmitch.utill.ApiErrorResponse
-import com.mine.mvvmmitch.utill.ApiSuccessResponse
+import com.breakingbad.trial.util.ApiEmptyResponse
+import com.breakingbad.trial.util.ApiErrorResponse
+import com.breakingbad.trial.util.ApiSuccessResponse
 
 
 class CharacterActivity : BaseActivity() {
