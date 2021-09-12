@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+<variable
+    name="character"
+    type="com.breakingbad.trial.characters.model.Character" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/tvCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivCharacter"
+            android:text="@{character.name}"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tvNickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCharacter"
+            android:layout_margin="10dp"
+            android:text="@{character.nickname}"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+</layout>
